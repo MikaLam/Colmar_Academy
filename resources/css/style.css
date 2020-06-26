@@ -1,0 +1,188 @@
+/*General CSS*/
+html,
+body {
+  color: #4a4a4a;
+  height: 100%;
+}
+/*Desktop View*/
+
+/*Nav-Bar CSS*/
+header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  background-color: white;
+}
+
+.top-bar-desktop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 7px 24px;
+}
+
+.top-bar-desktop a {
+  text-decoration: none;
+  color: #4a4a4a;
+  text-align: center;
+}
+
+.top-bar-desktop a img {
+  height: 32px;
+  vertical-align: middle;
+  display: inline-block;
+  margin: auto;
+}
+
+.top-bar-desktop .dark {
+  font-weight: bold;
+}
+
+.top-bar-desktop .light {
+  color: #e3e3e3;
+}
+
+.top-bar-desktop ul {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  vertical-align: bottom;
+}
+
+.top-bar-desktop li {
+  padding-left: 16px;
+}
+
+.top-bar-mobile {
+  display: none;
+}
+
+/*Box 1 CSS*/
+.box1-desktop {
+  background-color: #d8d8d8;
+  position: relative;
+  top: 64px;
+  align-items: center;
+  max-height: 800px;
+}
+
+.box1-banner-desktop {
+  height: 700px;
+  width: 60%;
+  margin: 32px 24px;
+  background-image: url("../images/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.box1-textbox-desktop {
+  width: 30%;
+  display: inline-block;
+  color: #4a4a4a;
+  vertical-align: middle;
+}
+
+.box1-textbox-desktop h2 {
+  font-size: 60px;
+}
+
+.box1-textbox-desktop h4 {
+  font-size: 30px;
+}
+
+.button-desktop {
+  font-size: 24px;
+  background-color: #4a4a4a;
+  color: white;
+  padding: 8px 150px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 600px) {
+  .box1-mobile {
+    display: none;
+  }
+}
+
+/*Mobile View*/
+
+@media only screen and (max-width: 600px) {
+  /*Nav-Bar CSS*/
+  header .top-bar-desktop {
+    display: none;
+  }
+
+  header .top-bar-mobile {
+    display: block;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header .top-bar-mobile {
+  }
+
+  header .top-bar-mobile ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    list-style: none;
+    vertical-align: bottom;
+  }
+
+  header .top-bar-mobile li {
+    padding: 0;
+  }
+
+  /*Box 1 CSS*/
+  .box1-desktop {
+    display: none;
+  }
+
+  .box1-mobile {
+    background-color: #d8d8d8;
+    position: relative;
+    top: 64px;
+    align-items: center;
+    max-height: 800px;
+  }
+
+  .box1-banner-mobile {
+    height: 400px;
+    max-width: auto;
+    margin: 0;
+    background-image: url("../images/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+
+  .box1-textbox-mobile {
+    max-width: 600px;
+    color: #4a4a4a;
+  }
+
+  .box1-textbox-mobile h2 {
+    font-size: 60px;
+    margin: 32px auto 32px 16px;
+  }
+
+  .box1-textbox-mobile h4 {
+    font-size: 32px;
+    margin: 0 auto 0 16px;
+  }
+
+  .button-mobile {
+    margin: 24px 20px 32px 20px;
+    font-size: 20px;
+    background-color: #9b9b9b;
+    color: white;
+    padding: 8px 200px;
+    cursor: pointer;
+    border: none;
+  }
+}
