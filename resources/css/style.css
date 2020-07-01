@@ -1,8 +1,9 @@
 /*General CSS*/
 html,
-body {
+body,
+header {
   color: #4a4a4a;
-  height: 100%;
+  max-width: 1360px;
 }
 /*Desktop View*/
 
@@ -63,29 +64,31 @@ header {
   position: relative;
   top: 64px;
   align-items: center;
-  max-height: 800px;
+  display: flex;
 }
 
 .box1-banner-desktop {
-  height: 700px;
+  height: auto;
   width: 60%;
   margin: 32px 24px;
-  background-image: url("../images/banner.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
   display: inline-block;
-  vertical-align: middle;
+}
+
+.box1-banner-desktop img {
+  height: auto;
+  width: 100%;
 }
 
 .box1-textbox-desktop {
-  width: 30%;
+  width: 40%;
   display: inline-block;
   color: #4a4a4a;
-  vertical-align: middle;
+  margin: 32px 24px;
 }
 
 .box1-textbox-desktop h2 {
   font-size: 60px;
+  margin: 0;
 }
 
 .box1-textbox-desktop h4 {
@@ -100,8 +103,159 @@ header {
   cursor: pointer;
 }
 
+/*Box 2 CSS*/
+.box2-desktop {
+  background-color: white;
+  position: relative;
+  top: 64px;
+  height: auto;
+  display: flex;
+}
+
+.box2-subbox1-desktop {
+  height: auto;
+  width: 60%;
+  margin: 32px 24px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.box2-subbox1-desktop img {
+  height: auto;
+  width: 100%;
+}
+
+.box2-subbox1-desktop h2 {
+  font-size: 45px;
+  margin-top: 32px;
+  margin-bottom: 0;
+}
+
+.box2-subbox1-desktop h5 {
+  font-size: 22px;
+  font-weight: 300;
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+.box2-subbox1-desktop h6 {
+  font-size: 16px;
+  padding: 32px 0;
+  margin: 0;
+}
+
+.box2-subbox2-desktop {
+  height: auto;
+  width: 40%;
+  margin: 32px 0 32px 24px;
+}
+
+.box2-subbox2-newsbox-desktop {
+  height: auto;
+  width: 100%;
+  margin: 15px;
+  align-items: center;
+  display: flex;
+  transition-property: background-color;
+}
+
+.box2-subbox2-newsbox-desktop:hover {
+  background-color: #d8d8d8;
+}
+
+.box2-subbox2-newsbox-desktop .newsbox-img {
+  display: inline-block;
+  width: 35%;
+  height: auto;
+}
+
+.box2-subbox2-newsbox-desktop .newsbox-img img {
+  width: 100%;
+  max-height: auto;
+}
+
+.box2-subbox2-newsbox-desktop .newsbox-txt {
+  display: inline-block;
+  width: 65%;
+  height: auto;
+}
+
+.desc1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.desc2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.desc3 {
+  text-decoration: none;
+  color: #5cbfde;
+  font-size: 15px;
+  margin-left: 20px;
+}
+
+/*Box 3 CSS*/
+.box3.desktop {
+  background-color: #d8d8d8;
+  position: relative;
+  top: 64px;
+  align-items: center;
+  padding: 0 72px;
+}
+
+.box3-header.desktop {
+  width: 100%;
+  text-align: center;
+  font-size: 45px;
+  font-weight: bold;
+  padding-top: 32px;
+}
+
+.box3-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.box3-course {
+  width: 30%;
+  padding: 32px 16px;
+}
+
+.box3-course img {
+  width: 100%;
+}
+
+.box3-course .course-header {
+  background-color: white;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 16px;
+}
+
+.box3-course .course-desc {
+  background-color: white;
+  font-size: 20px;
+  padding-left: 16px;
+  padding-bottom: 16px;
+}
+
 @media only screen and (min-width: 600px) {
   .box1-mobile {
+    display: none;
+  }
+
+  .box2-mobile {
+    display: none;
+  }
+
+  .box3.mobile {
     display: none;
   }
 }
@@ -110,6 +264,10 @@ header {
 
 @media only screen and (max-width: 600px) {
   /*Nav-Bar CSS*/
+  .box3 .desktop {
+    display: none;
+  }
+
   header .top-bar-desktop {
     display: none;
   }
@@ -184,5 +342,78 @@ header {
     padding: 8px 200px;
     cursor: pointer;
     border: none;
+  }
+
+  /*Box2 CSS*/
+  .box2-desktop {
+    display: none;
+  }
+
+  .box2-mobile {
+    position: relative;
+    top: 64px;
+    height: auto;
+    width: 100%;
+    margin: 0;
+    align-items: center;
+  }
+
+  .box2-newsbox-mobile {
+    height: auto;
+    width: 94%;
+    margin: 24px 16px;
+    align-items: center;
+    transition-property: background-color;
+  }
+
+  .box2-newsbox-mobile:hover {
+    background-color: #d8d8d8;
+  }
+
+  .box2-newsbox-mobile .newsbox-img {
+    box-sizing: content-box;
+    width: 100%;
+    margin: 0;
+  }
+
+  .box2-newsbox-mobile .newsbox-img img {
+    width: 100%;
+    margin: 0;
+  }
+
+  .box2-newsbox-mobile .newsbox-txt {
+    width: 100%;
+    height: auto;
+    margin-top: 16px;
+  }
+
+  /*Box 3 CSS*/
+  .box3.mobile {
+    background-color: white;
+    position: relative;
+    top: 64px;
+    width: 100%;
+    padding-bottom: 32px;
+  }
+
+  .box3-header.mobile {
+    background-color: white;
+    color: #4a4a4a;
+    font-size: 60px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    padding: 32px 0;
+  }
+
+  .box3-courseheader.mobile {
+    text-align: left;
+    background-color: #d8d8d8;
+    color: #4a4a4a;
+    font-size: 32px;
+    font-weight: 700;
+    border: 1px solid white;
+    width: 100%;
+    padding: 32px 0 32px 32px;
   }
 }
